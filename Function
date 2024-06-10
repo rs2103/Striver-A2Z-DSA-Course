@@ -1,0 +1,19 @@
+Your Task:
+You don't need to read input or print anything. Your task is to complete the function passedBy() which takes a and b as input parameters and returns array of two required integers.
+Example 1:
+
+Input:
+a = 1
+b = 2
+Output:
+2 4
+Explanation: 1 was passed by value whereas 2 passed by reference.
+
+class Solution {
+    static int[] passedBy(int a, int b) {
+        // code here
+        int new_a = a+1;
+        int new_b = b+2;
+        return new int[] {new_a,new_b};
+    }
+}
