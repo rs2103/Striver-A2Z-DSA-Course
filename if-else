@@ -1,0 +1,26 @@
+/* Your Task:  
+You don't need to read input or print anything. Your task is to complete the function compareNM() which takes two integer n and m as input parameters and returns string
+'lesser' if n < m
+'equal' if n == m
+'greater' if n > m
+Example 1:
+Input:
+n = 4
+m = 8
+Output: lesser
+Explanation:
+4 < 8 so print 'lesser'. */
+
+class Solution {
+    public static String compareNM(int n, int m) {
+        // code here
+        if(n < m)
+            return "lesser";
+        if(n==m)
+            return "equal";
+        if(n > m)
+           return "greater";
+    return "null";
+        
+    }
+}
