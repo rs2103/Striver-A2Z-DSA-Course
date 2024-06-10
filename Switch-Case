@@ -1,0 +1,41 @@
+Your Task:
+You do not need to read input or print anything. Your task is to complete the function switchCase() which takes choice and a list arr[], containing the single value R or the two values L and B, as input parameters. It should return the area of the desired geometrical figure.
+
+Note: Use Math.PI for the value of pi.
+Example 1:
+
+Input: 
+choice = 1, 
+R = 5
+Output: 78.53981633974483
+Explaination: The choice is 1. 
+So we have to calculate the area of the circle.
+Example 2:
+
+Input: 
+choice = 2, 
+L = 5, B = 10
+Output: 50
+Explaination: Here we have to calculate the 
+area of the rectangle.
+
+class Solution{
+    static double switchCase(int choice, List<Double> arr){
+        // code here
+        double area = 0.0;
+        switch(choice) {
+            case 1:
+                double R = arr.get(0);
+                area = Math.PI * R * R;
+                break;
+            case 2:
+                double L = arr.get(0);
+                double B = arr.get(1);
+                area = L*B;
+                break;
+            default:
+                return -1;
+        }
+        return area;
+    }
+}
