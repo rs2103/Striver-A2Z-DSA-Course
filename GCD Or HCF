@@ -1,0 +1,32 @@
+LCM And GCD
+Example 1:
+
+Input:
+A = 5 , B = 10
+Output:
+10 5
+Explanation:
+LCM of 5 and 10 is 10, while
+thier GCD is 5.
+Your Task:
+You don't need to read input or print anything. 
+Your task is to complete the function lcmAndGcd() which takes an Integer N as input and returns a List of two Integers, the required LCM and GCD.
+
+Expected Time Complexity: O(log(min(A, B))
+Expected Auxiliary Space: O(1)
+
+class Solution {
+    static Long[] lcmAndGcd(Long A , Long B) {
+        // code here
+        Long gcd = calculateGCD(A, B);
+        Long lcm = (A * B) / gcd;
+        return new Long[]{lcm, gcd};
+    }
+    
+    static Long calculateGCD(Long a, Long b) {
+        if (b == 0)
+            return a;
+        return calculateGCD(b, a % b);
+    }
+    
+}
