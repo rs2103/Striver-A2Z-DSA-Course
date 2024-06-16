@@ -1,0 +1,31 @@
+Remove Outermost Parentheses
+Example 1:
+
+Input: s = "(()())(())"
+Output: "()()()"
+Explanation: 
+The input string is "(()())(())", with primitive decomposition "(()())" + "(())".
+After removing outer parentheses of each part, this is "()()" + "()" = "()()()".
+
+class Solution {
+    public String removeOuterParentheses(String s) {
+        StringBuilder result = new StringBuilder();
+        int balance = 0;
+        for(char c : s.toCharArray()){
+            if(c == '('){
+                if(balance > 0){
+                    result.append(c);
+                }
+                 balance++;
+            }
+            else{
+                balance--;
+                if(balance > 0){
+                    result.append(c);
+                }
+            } 
+               
+        }
+        return result.toString();
+    }
+}
